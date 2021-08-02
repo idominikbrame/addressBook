@@ -1,8 +1,9 @@
 import {Component} from "react"
 import axios from "axios";
-
+import Contacts from "./components/Contacts";
 
 class App extends Component {
+
     constructor(props) {
         super(props);
 
@@ -14,16 +15,19 @@ class App extends Component {
     componentDidMount() {
         axios.get('https://randomuser.me/api?results=25')
             .then(res => {
-                let contacts = res.data.results
-                console.log(contacts)
+                const users = res.data.results;
+                this.setState({users})
             })
     }
+
+
+
 
 
     render(){
         return (
             <div className="App">
-
+                <Contacts  state={this.state}/>
             </div>
         )
     }
