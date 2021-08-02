@@ -1,6 +1,6 @@
 import React from "react"
 
-function UserData(props) {
+const UserData = (props) => {
     const [visible, setVisible] = React.useState(true)
 
     return (
