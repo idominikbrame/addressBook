@@ -1,6 +1,6 @@
 import React from "react"
 
-function User(props) {
+function UserData(props) {
     const [visible, setVisible] = React.useState(true)
 
     return (
@@ -21,4 +21,4 @@ function User(props) {
     )
 }
 
-export default User
+export default UserData
