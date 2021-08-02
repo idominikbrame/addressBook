@@ -15,8 +15,9 @@ class App extends Component {
     componentDidMount() {
         axios.get('https://randomuser.me/api?results=25')
             .then(res => {
-                const users = res.data.results;
-                this.setState({users})
+                const contacts = res.data.results;
+                this.setState({users: contacts})
+                console.log(contacts)
             })
     }
 

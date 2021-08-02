@@ -5,7 +5,7 @@ function UserData(props) {
 
     return (
         <div>
-            <h4>{props.name.first}, {props.name.last}</h4>
+            <h3>{props.name.last}, {props.name.first}</h3>
             <img alt={props.name.last} src={props.picture.thumbnail}/>
             <br></br>
             <button onClick={() => setVisible(!visible)}>
@@ -14,7 +14,8 @@ function UserData(props) {
 
             {!visible &&
                 <div>
-                    <p>Chicken</p>
+                    <p>{props.email}</p>
+                    <p>{props.phone}</p>
                 </div>
             }
         </div>
